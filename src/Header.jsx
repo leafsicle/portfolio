@@ -33,7 +33,7 @@ class Header extends Component {
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">
-									about me
+									About me
 								</a>
 							</li>
 							<li class="nav-item dropdown">
@@ -46,7 +46,7 @@ class Header extends Component {
 									aria-haspopup="true"
 									aria-expanded="false"
 								>
-									Social Sites
+									Contact Me
 								</a>
 								<div
 									class="dropdown-menu"
@@ -57,14 +57,28 @@ class Header extends Component {
 										href="https://github.com/leafsicle"
 										target="_blank"
 									>
-										GitHub
+										<i class="fab fa-github-square fa-2x" /> Github
 									</a>
 									<a
 										class="dropdown-item"
 										href="https://www.linkedin.com/in/cookem529/"
 										target="_blank"
 									>
-										<i class="fab fa-linkedin" />
+										<i class="fab fa-linkedin fa-2x" /> LinkedIn
+									</a>
+									<a
+										class="dropdown-item"
+										href="tel:18134180636"
+										target="_blank"
+									>
+										<i class="fas fa-phone fa-2x" /> Call me
+									</a>
+
+									<a
+										class="dropdown-item"
+										href="mailto:cookem529@gmail.com?Subject=Portfolio&Body=Hey%2C%20Matt%21%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20I%20saw%20your%20portfolio%20and%20was%20interested%20in%20getting%20to%20know%20more%20about%20you.%20"
+									>
+										<i class="fas fa-envelope fa-2x" /> email
 									</a>
 								</div>
 							</li>
