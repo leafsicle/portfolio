@@ -1,98 +1,77 @@
 import React, { Component } from 'react'
-import { BrowserRouter as NavLink } from 'react-router-dom'
 
 class Header extends Component {
-	state = {
-		class: 'hide'
-	}
-
-	_openMenu = () => {
-		this.setState({
-			class: 'open'
-		})
-	}
-
-	_hideMenu = () => {
-		this.setState({
-			class: 'hide'
-		})
-	}
-
 	render() {
 		return (
-			<>
-				<header className="header">
-					<nav className="big-nav">
-						<li>
-							<NavLink to="/">
-								<img className="logo" src="./images/logo.png" alt="logo" />
-							</NavLink>
-						</li>
-						<div className="big-header-links">
-							<li className="big-header">
-								<NavLink className="link" title="Take Me Home!" exact to="/">
-									Home
-								</NavLink>
+			<div>
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<a class="navbar-brand" href="#">
+						Navbar
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarNavDropdown"
+						aria-controls="navbarNavDropdown"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon" />
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">
+									Home <span class="sr-only">(current)</span>
+								</a>
 							</li>
-							<li className="big-header">
-								<NavLink
-									className="link"
-									title="Check out my Portfolio"
-									to="/portfolio"
-								>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
 									Portfolio
-								</NavLink>
+								</a>
 							</li>
-							<li className="big-header">
-								<NavLink className="link" title="View my Resume" to="/resume">
-									Résumé
-								</NavLink>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									about me
+								</a>
 							</li>
-						</div>
-						<li onClick={this._openMenu} className="hamburger">
-							<div />
-							<div />
-							<div />
-						</li>
-					</nav>
-				</header>
-				<section className={`${this.state.class} menu`}>
-					<p onClick={this._hideMenu} className="menu-x">
-						X
-					</p>
-					<nav>
-						<ul>
-							<NavLink onClick={this._hideMenu} className="link" exact to="/">
-								<li>Home</li>
-							</NavLink>
-							<NavLink
-								onClick={this._hideMenu}
-								className="link"
-								to="/portfolio"
-							>
-								<li>Portfolio</li>
-							</NavLink>
-							<NavLink onClick={this._hideMenu} className="link" to="/resume">
-								<li>Résumé</li>
-							</NavLink>
-							<a
-								onClick={this._hideMenu}
-								className="link contact"
-								href="tel://18134180636"
-							>
-								<li className="menu-contact">+1 (813) 418-0636</li>
-							</a>
-							<a
-								onClick={this._hideMenu}
-								className="link contact"
-								href="mailto:cookem529@gmail.com"
-							>
-								<li className="menu-contact">cookem529@gmail.com</li>
-							</a>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarDropdownMenuLink"
+									role="button"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+								>
+									Social Sites
+								</a>
+								<div
+									class="dropdown-menu"
+									aria-labelledby="navbarDropdownMenuLink"
+								>
+									<a
+										class="dropdown-item"
+										href="https://github.com/leafsicle"
+										target="_blank"
+									>
+										GitHub
+									</a>
+									<a
+										class="dropdown-item"
+										href="https://www.linkedin.com/in/cookem529/"
+										target="_blank"
+									>
+										<i class="fab fa-linkedin" />
+									</a>
+								</div>
+							</li>
 						</ul>
-					</nav>
-				</section>
-			</>
+					</div>
+				</nav>
+			</div>
 		)
 	}
 }
